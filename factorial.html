@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <label for="fact">enter a number</label>
+        <input type="text" id="fact" name="fact"><br>
+        <button id="sub">submit</button>
+        <div id="show"></div>
+
+         
+    </form>
+</body>
+<script>
+    let forms=document.querySelector('form')
+    
+   
+    function Factorial(e)
+    {
+      e.preventDefault();
+      let mul=1
+      let inEl=parseInt(document.getElementById('fact').value)
+      let divEl=document.getElementById('show')
+      for(i=inEl;i>0;i--)
+      {
+        mul=mul*i
+      }
+      divEl.innerText=`The factorial of give number is${mul}`
+    return mul;
+    
+  
+    }
+    forms.addEventListener("submit",Factorial)
+</script>
+</html>

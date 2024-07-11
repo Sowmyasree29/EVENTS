@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <label for="otp">Enter no.of digits in otp</label>
+        <input type="text" id="otp" name="otp"><br>
+        <button>submit</button>
+        <!-- <button id="clear">Clear</button> -->
+    </form>
+</body>
+<script>
+    let forms=document.querySelector('form')
+    function Otp(e)
+    {
+      e.preventDefault();
+      let length=parseInt(document.getElementById('otp').value)
+    let min=Math.pow(10,length-1)
+    let max=Math.pow(10,length) -1;
+    let otp=Math.floor(Math.random()*(max-min+1)+min)
+      document.getElementById('otp').value=otp
+
+
+    }
+    forms.addEventListener("submit",Otp)
+    // let btn=document.getElementById('clear')
+   
+    // function Clear()
+    // {
+    //     let clean=""
+      
+    //     document.getElementById('otp').value=clean
+    // }
+    // btn.addEventListener("click",Clear)
+
+
+</script>
+</html>

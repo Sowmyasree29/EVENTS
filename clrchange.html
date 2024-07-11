@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="clr">CLICK TO CHANGE THE COLOR</h1>
+    <button type="submit" id="sub">click</button>
+
+
+</body>
+<script>
+    function change()
+    {
+    let a1=Math.floor(Math.random()*256)
+    let a2=Math.floor(Math.random()*256)
+    let a3=Math.floor(Math.random()*256)
+    let clr=`rgb(${a1},${a2},${a3})`
+    let hEl=document.getElementById('clr')
+    hEl.style.color=clr
+    }
+    document.getElementById('sub').addEventListener("click",change)
+
+
+</script>
+</html>

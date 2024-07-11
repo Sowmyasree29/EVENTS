@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" id="f1">
+        <label for="nbr">Enter any number</label>
+        <input type="text" id="nbr" name="nbr"><br>
+        <button>submit</button>
+        <div id="show"></div>
+
+    </form>
+</body>
+<script>
+       let forms=document.getElementById('f1')
+       function check(e)
+       { 
+           e.preventDefault()
+           let inEl=document.getElementById('nbr').value
+           let divEl=document.getElementById('show')
+           if(inEl%2==0)
+           {
+             
+             divEl.innerHTML="<b>it is even</b>";
+           }
+           else{
+            divEl.innerHTML="<b>it is odd</b>";
+           }
+          
+           
+       }
+       forms.addEventListener("submit",check)
+</script>
+</html>
